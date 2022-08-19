@@ -28,7 +28,5 @@ public class Palindrome {
         System.out.printf("Is it palindrome? - %b \n", palindrome.isPalindrome(scan.next()));
         System.out.println("Lets test number for palindrome:");
         System.out.printf("Is it palindrome? - %b \n", palindrome.isPalindrome(scan.nextInt()));
-
-
     }
 }
