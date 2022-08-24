@@ -1,4 +1,6 @@
-package com.javalessons.oop;
+package com.javalessons.oop.gettersetterconstructor;
+
+import com.javalessons.oop.gettersetterconstructor.Dog;
 
 public class Main {
     public static void main(String[] args) {
