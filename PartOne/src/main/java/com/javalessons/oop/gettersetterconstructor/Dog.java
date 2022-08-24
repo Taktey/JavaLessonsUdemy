@@ -1,4 +1,4 @@
-package com.javalessons.oop;
+package com.javalessons.oop.gettersetterconstructor;
 
 public class Dog {
     private String name;
