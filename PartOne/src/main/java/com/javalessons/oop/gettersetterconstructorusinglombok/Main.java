@@ -11,6 +11,5 @@ public class Main {
         System.out.println(dog.getName());
         dog.setAgressive(true);
         System.out.println(dog.getAgressive());
-
     }
 }
