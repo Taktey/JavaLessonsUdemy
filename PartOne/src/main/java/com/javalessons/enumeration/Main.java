@@ -13,5 +13,20 @@ public class Main {
         Dog dog3 = new Dog();
         dog3.setSize(Size.SMALL);
         dog3.bark();
+
+        Dog dog4 = new Dog();
+        dog4.bark();
+
+        Size s = Size.SMALL;
+        System.out.println(s.toString()); // print ENUM element as a String
+        System.out.println(s); // also print ENUM element as a String
+        Size s1 = Size.valueOf("BIG"); //initialization via String value
+        System.out.println(s1);
+        System.out.println("____________________________________");
+        Size[] values = Size.values(); // Get collection of ENUM elements
+        for(int i=0; i< values.length;i++){
+            System.out.println(values[i]);
+        }
+
     }
 }
