@@ -1,7 +1,7 @@
 package com.javalessons.enumeration;
 
 public class Dog {
-    private Size size;
+    private Size size = Size.UNDEFINED;
 
     public void bark(){
         switch (size){
@@ -11,6 +11,8 @@ public class Dog {
             case SMALL:
                 System.out.println("Tiaf-Tiaf");
                 break;
+            default:
+                System.out.println("Dog's size is undefined");
         }
     }
 
