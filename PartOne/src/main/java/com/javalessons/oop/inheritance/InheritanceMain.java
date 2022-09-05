@@ -2,16 +2,26 @@ package com.javalessons.oop.inheritance;
 
 public class InheritanceMain {
     public static void main(String[] args) {
-      /*  Auto auto = new Auto();
-        System.out.println(auto.getProducer());
-        System.out.println(auto.getModel());
 
-        Truck truck = new Truck();
-        System.out.println(truck.getProducer());
-        System.out.println(truck.getModel());*/
+        Truck truck = new Truck("Volvo", "L2", EngineType.PETROL, 350, 600, 1000);
+        truck.start();
+        truck.accelerate(10);
+        truck.start();
+        truck.fuelUp(200);
+        truck.load();
+        truck.unLoad();
 
+        System.out.println("\n");
+        ElectricCar car = new ElectricCar("Tesla", "S", 100, 4);
+        car.start();
+        car.stop();
+        car.charge();
+
+        System.out.println("\n");
         Bus bus = new Bus("Minsk", "M1", EngineType.PETROL, 10, 100, 30);
-        System.out.println(bus.getProducer());
-        System.out.println(bus.getModel());
+        bus.fuelUp(100);
+        bus.pickUpPassengers(5);
+        bus.start();
+        bus.releasePassengers();
     }
 }
