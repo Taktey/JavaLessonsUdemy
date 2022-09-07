@@ -18,17 +18,15 @@ public class main {
         System.out.println(list.contains("String1"));
         list.addFirst("String First");
         list.addLast("String Last");
-        System.out.println(list.peekFirst()+", "+ list.peekLast());
+        System.out.println(list.peekFirst() + ", " + list.peekLast());
         System.out.println(new LinkedList<>());
         System.out.println(list.pollFirst());
         System.out.println(list.pollLast());
         System.out.println(list);
 
         String[] array = list.toArray(new String[3]);
-        for(String string: array){
-            System.out.print(string+", ");
+        for (String string : array) {
+            System.out.print(string + ", ");
         }
-        
-
     }
 }
