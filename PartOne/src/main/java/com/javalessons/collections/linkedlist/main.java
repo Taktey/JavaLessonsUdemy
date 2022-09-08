@@ -39,12 +39,12 @@ public class main {
         list.add("qwe4");
         list.add("qwe1");
         Iterator<String> iterator = list.iterator();
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             String currentElement = iterator.next();
-            if(currentElement.equals("qwe1")){
+            if (currentElement.equals("qwe1")) {
                 iterator.remove();
             }
         }
-        System.out.println("\n"+list);
+        System.out.println("\n" + list);
     }
 }
