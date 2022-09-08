@@ -1,6 +1,7 @@
 package com.javalessons.collections.linkedlist;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class main {
@@ -28,5 +29,22 @@ public class main {
         for (String string : array) {
             System.out.print(string + ", ");
         }
+        list.add("qwe2");
+        list.add("qwe");
+        list.add("qwe5");
+        list.add("qwe");
+        list.add("qwe1");
+        list.add("qwe3");
+        list.add("qwe1");
+        list.add("qwe4");
+        list.add("qwe1");
+        Iterator<String> iterator = list.iterator();
+        while(iterator.hasNext()){
+            String currentElement = iterator.next();
+            if(currentElement.equals("qwe1")){
+                iterator.remove();
+            }
+        }
+        System.out.println("\n"+list);
     }
 }
