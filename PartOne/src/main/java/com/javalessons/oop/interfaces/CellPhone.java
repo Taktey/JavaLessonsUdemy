@@ -1,6 +1,6 @@
 package com.javalessons.oop.interfaces;
 
-public class CellPhone extends Electronics implements Deliverable, Orderable {
+public class CellPhone extends Electronics implements Priceable {
 
     public CellPhone(String make, String model, int quantity, int price) {
         super(make, model, quantity, price);

@@ -1,6 +1,6 @@
 package com.javalessons.oop.interfaces;
 
-public class Pizza implements Deliverable, Orderable {
+public class Pizza implements Priceable {
     private String name;
     private int quantity;
     private int price;
@@ -22,6 +22,7 @@ public class Pizza implements Deliverable, Orderable {
 
     @Override
     public int calcOrderPrice() {
+        Priceable.doSmth();
         return quantity * price;
     }
 }
