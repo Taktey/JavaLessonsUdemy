@@ -1,0 +1,31 @@
+package com.javalessons.oop.interfaces;
+
+public abstract class Electronics implements Deliverable {
+    private String make;
+    private String model;
+    private int quantity;
+    private int price;
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public Electronics(String make, String model, int quantity, int price) {
+        this.make = make;
+        this.model = model;
+        this.quantity = quantity;
+        this.price = price;
+    }
+}
