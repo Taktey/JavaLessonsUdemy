@@ -6,6 +6,7 @@ public class Main {
         phone.turnOn();
         Display display = phone.getDisplay();
         // Display.Pixel pixel = display.new Pixel(100, 100, Display.Color.RED); Works if Pixel not static
-        Display.Pixel pixel2 = new Display.Pixel(100, 100, Display.Color.RED);
+        // Display.Pixel pixel2 = new Display.Pixel(100, 100, Display.Color.RED); Works if Pixel not private
+        phone.call("1234567890");
     }
 }
