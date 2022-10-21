@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class ExceptionHandingMain {
 
-    public static void main(String[] args) /*throws IOException*/{
+    public static void main(String[] args) /*throws IOException*/ {
         Scanner scanner = new Scanner(System.in);
         boolean continueLoop = true;
         PrintWriter writer = null;
@@ -19,8 +19,10 @@ public class ExceptionHandingMain {
                 System.out.println("Please enter denominator");
                 int denominator = scanner.nextInt();
                 System.out.println(divide(numerator, denominator));
+                int[] array = new int[1];
+                int i = array[2];
                 writer = new PrintWriter(new FileWriter("res.txt"));
-                writer.println("Result = "+ divide(numerator, denominator));
+                writer.println("Result = " + divide(numerator, denominator));
                 continueLoop = false;
             } catch (ArithmeticException | InputMismatchException e) {
                 System.out.println("Exception: " + e);
@@ -33,15 +35,21 @@ public class ExceptionHandingMain {
             } */ catch (IOException e) {
                 System.out.println("Unable to open file");
                 e.printStackTrace();
-            } finally {
+            } catch (ArrayIndexOutOfBoundsException e){
+              throw new InvalidInputParamException("Array index is out of bounds: "+ e);
+            } catch (Exception e){
+                System.out.println("All exceptions");
+            }finally {
                 System.out.println("Finally block called");
-                writer.close();
+                if (writer != null) {
+                    writer.close();
+                }
             }
         } while (continueLoop);
         System.out.println("Try catch block finished");
     }
 
-    private static int divide(int numerator, int denominator) /*throws ArithmeticException, NullPointerException*/{
+    private static int divide(int numerator, int denominator) /*throws ArithmeticException, NullPointerException*/ {
         return numerator / denominator;
     }
 
